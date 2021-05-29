@@ -1,0 +1,60 @@
+﻿@page
+@model WebWarehouseDB.Pages.Customers.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Customer.CustomerId" />
+            <div class="form-group">
+                <label asp-for="Customer.Name" class="control-label"></label>
+                <input asp-for="Customer.Name" class="form-control" />
+                <span asp-validation-for="Customer.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Address" class="control-label"></label>
+                <input asp-for="Customer.Address" class="form-control" />
+                <span asp-validation-for="Customer.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.PhoneNumber" class="control-label"></label>
+                <input asp-for="Customer.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Customer.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ConsumedProduct1Id" class="control-label"></label>
+                <select asp-for="Customer.ConsumedProduct1Id" class="form-control" asp-items="ViewBag.ConsumedProduct1Id"></select>
+                <span asp-validation-for="Customer.ConsumedProduct1Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ConsumedProduct2Id" class="control-label"></label>
+                <select asp-for="Customer.ConsumedProduct2Id" class="form-control" asp-items="ViewBag.ConsumedProduct2Id"></select>
+                <span asp-validation-for="Customer.ConsumedProduct2Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ConsumedProduct3Id" class="control-label"></label>
+                <select asp-for="Customer.ConsumedProduct3Id" class="form-control" asp-items="ViewBag.ConsumedProduct3Id"></select>
+                <span asp-validation-for="Customer.ConsumedProduct3Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

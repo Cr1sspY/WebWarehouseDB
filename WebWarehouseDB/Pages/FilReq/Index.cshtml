@@ -1,0 +1,54 @@
+﻿@page
+@model WebWarehouseDB.Pages.FilReq.IndexModel
+@{
+}
+
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="text-decoration: none">
+                    Запросы
+                </button>
+            </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <a class="nav-link text-dark" asp-area="" asp-page="/FilReq/Request/HRDep">Отдел кадров</a>
+                <a class="nav-link text-dark" asp-area="" asp-page="/FilReq/Request/ProductsList">Список товаров</a>
+                <!--<a class="nav-link text-dark" asp-area="" asp-page="/FilReq/Request/ProvidersList">Список поставщиков</a>-->
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="text-decoration: none">
+                    Фильтры
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                <form>
+                    Отобразить сотрудников с должностью:
+                    <select asp-items="Model.HRDep" name="id" class="form-control-sm">
+                        <option value="null">Должность не выбрана</option>
+                    </select>
+                    <button asp-page="Filter/EmployeeFilter" class="btn btn-primary">Отфильтровать</button>
+                </form>
+                <br />
+
+               <!-- <form>
+                    Отобразить вызовы с тарифом:
+                    <select asp-items="Model.Rate" name="id" class="form-control-sm">
+                        <option value="null">Тариф не выбран</option>
+                    </select>
+                    <button asp-page="filter/CallFilter" class="btn btn-primary">Отфильтровать</button>
+                </form> -->
+                <br />
+            </div>
+        </div>
+    </div>
+</div>

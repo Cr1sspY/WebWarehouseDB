@@ -1,0 +1,80 @@
+﻿@page
+@model WebWarehouseDB.Pages.Warehouses.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Warehouse</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Warehouse.WarehouseId" class="control-label"></label>
+                <input asp-for="Warehouse.WarehouseId" class="form-control" />
+                <span asp-validation-for="Warehouse.WarehouseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.SupplyDate" class="control-label"></label>
+                <input asp-for="Warehouse.SupplyDate" class="form-control" />
+                <span asp-validation-for="Warehouse.SupplyDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.OrderDate" class="control-label"></label>
+                <input asp-for="Warehouse.OrderDate" class="form-control" />
+                <span asp-validation-for="Warehouse.OrderDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.ShipmentDate" class="control-label"></label>
+                <input asp-for="Warehouse.ShipmentDate" class="form-control" />
+                <span asp-validation-for="Warehouse.ShipmentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.Volume" class="control-label"></label>
+                <input asp-for="Warehouse.Volume" class="form-control" />
+                <span asp-validation-for="Warehouse.Volume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.Price" class="control-label"></label>
+                <input asp-for="Warehouse.Price" class="form-control" />
+                <span asp-validation-for="Warehouse.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.TypeOfDelivery" class="control-label"></label>
+                <input asp-for="Warehouse.TypeOfDelivery" class="form-control" />
+                <span asp-validation-for="Warehouse.TypeOfDelivery" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.CustomerId" class="control-label"></label>
+                <select asp-for="Warehouse.CustomerId" class ="form-control" asp-items="ViewBag.CustomerId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.ProductId" class="control-label"></label>
+                <select asp-for="Warehouse.ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.EmployeeId" class="control-label"></label>
+                <select asp-for="Warehouse.EmployeeId" class ="form-control" asp-items="ViewBag.EmployeeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warehouse.ProviderId" class="control-label"></label>
+                <select asp-for="Warehouse.ProviderId" class ="form-control" asp-items="ViewBag.ProviderId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
