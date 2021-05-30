@@ -2,7 +2,7 @@
 @model WebWarehouseDB.Pages.ProductTypes.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Типы товаров";
 }
 
 <h1>Типы товаров</h1>
@@ -38,9 +38,9 @@
                 @Html.DisplayFor(modelItem => item.Feature)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.TypeId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.TypeId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.TypeId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.TypeId">Редактировать</a> |
+                <a asp-page="./Details" asp-route-id="@item.TypeId">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.TypeId">Удалить</a>
             </td>
         </tr>
 }

@@ -17,7 +17,6 @@
             <div class="card-body">
                 <a class="nav-link text-dark" asp-area="" asp-page="/FilReq/Request/HRDep">Отдел кадров</a>
                 <a class="nav-link text-dark" asp-area="" asp-page="/FilReq/Request/ProductsList">Список товаров</a>
-                <!--<a class="nav-link text-dark" asp-area="" asp-page="/FilReq/Request/ProvidersList">Список поставщиков</a>-->
             </div>
         </div>
     </div>
@@ -40,13 +39,13 @@
                 </form>
                 <br />
 
-               <!-- <form>
-                    Отобразить вызовы с тарифом:
-                    <select asp-items="Model.Rate" name="id" class="form-control-sm">
-                        <option value="null">Тариф не выбран</option>
+                <form>
+                    Отобразить товары типа:
+                    <select asp-items="Model.ProductsList" name="id" class="form-control-sm">
+                        <option value="null">Тип не выбран</option>
                     </select>
-                    <button asp-page="filter/CallFilter" class="btn btn-primary">Отфильтровать</button>
-                </form> -->
+                    <button asp-page="Filter/TypeFilter" class="btn btn-primary">Отфильтровать</button>
+                </form>
                 <br />
             </div>
         </div>

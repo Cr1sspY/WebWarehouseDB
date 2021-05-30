@@ -2,13 +2,13 @@
 @model WebWarehouseDB.Pages.Warehouses.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Записи";
 }
 
-<h1>Index</h1>
+<h1>Записи</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Создать</a>
 </p>
 <table class="table">
     <thead>
@@ -80,9 +80,9 @@
                 @Html.DisplayFor(modelItem => item.Provider.Name)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.WarehouseId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.WarehouseId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.WarehouseId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.WarehouseId">Редактировать</a> |
+                <a asp-page="./Details" asp-route-id="@item.WarehouseId">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.WarehouseId">Удалить</a>
             </td>
         </tr>
 }

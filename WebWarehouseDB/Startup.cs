@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using WebWarehouseDB.Data;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 
 namespace WebWarehouseDB
 {
@@ -28,6 +30,9 @@ namespace WebWarehouseDB
             services.AddRazorPages();
             services.AddDbContext<WarehouseContext>(options =>
             options.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=WebWarehouseDB;Integrated Security=True"));
+            //предотвращение кодирования русских символов
+            services.AddSingleton(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic }));
+
 
         }
 

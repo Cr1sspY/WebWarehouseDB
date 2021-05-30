@@ -2,7 +2,7 @@
 @model WebWarehouseDB.Pages.Customers.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Заказчики";
 }
 
 <h1>Заказчики</h1>
@@ -56,9 +56,9 @@
                 @Html.DisplayFor(modelItem => item.ConsumedProduct3.Name)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.CustomerId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.CustomerId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CustomerId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.CustomerId">Редактировать</a> |
+                <a asp-page="./Details" asp-route-id="@item.CustomerId">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CustomerId">Удалить</a>
             </td>
         </tr>
 }

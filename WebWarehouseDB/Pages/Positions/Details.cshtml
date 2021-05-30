@@ -2,13 +2,13 @@
 @model WebWarehouseDB.Pages.Positions.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Детали";
 }
 
-<h1>Details</h1>
+<h1>Детали</h1>
 
 <div>
-    <h4>Position</h4>
+    <h4>Должность</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -38,6 +38,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Position.PositionId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Position.PositionId">Редактировать</a> |
+    <a asp-page="./Index">Назад</a>
 </div>
